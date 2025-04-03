@@ -1,8 +1,11 @@
 {
-  "name": "Flet Dev Container",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "name": "Python 3",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "devcontainer",
   "forwardPorts": [8080],
-  "postCreateCommand": "pip install -r requirements.txt"
+  "customizations": {
+    "jetbrains": {
+      "backend": "PyCharm"
+    }
+  }
 }
